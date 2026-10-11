@@ -1,0 +1,103 @@
+{
+  "manifest_version": "1.0.0",
+  "domain": "enterprise_cybersecurity_knowledge",
+  "updated_at": "2026-10-09T04:45:00Z",
+  "sources": [
+    {
+      "source_id": "src_mitre_attack_enterprise",
+      "title": "MITRE ATT&CK Enterprise Catalog",
+      "canonical_path": "data/mitre/enterprise_attack_fixture.json",
+      "canonical_url": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack.json",
+      "document_type": "mitre_attack_stix",
+      "version": "v14.1",
+      "license": "Apache-2.0",
+      "retrieved_at": "2026-10-09T03:30:00Z",
+      "content_hash": "7a0fe2a1c7d81f734b3b27397f6c3ddba854fd8871ffa685157579f9507d6fcf",
+      "status": "verified"
+    },
+    {
+      "source_id": "src_sigma_failed_logon_burst",
+      "title": "Potential Windows Failed Logon Burst (Brute Force)",
+      "canonical_path": "data/knowledge_base/sigma/sigma_win_failed_logon_burst.yml",
+      "canonical_url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_failed_logon_burst.yml",
+      "document_type": "sigma_rule",
+      "version": "2024-10-01",
+      "license": "Detection-Rule-License-1.1",
+      "retrieved_at": "2026-10-09T04:40:00Z",
+      "content_hash": "85a5c0e0a196ffc3a18aaee2d4d4303094e51e40d121c6e6c27afe91fafe2e8b",
+      "status": "verified"
+    },
+    {
+      "source_id": "src_sigma_privileged_user_creation",
+      "title": "Suspicious Privileged Group Member Addition",
+      "canonical_path": "data/knowledge_base/sigma/sigma_win_privileged_user_creation.yml",
+      "canonical_url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_privileged_group_addition.yml",
+      "document_type": "sigma_rule",
+      "version": "2024-02-10",
+      "license": "Detection-Rule-License-1.1",
+      "retrieved_at": "2026-10-09T04:40:00Z",
+      "content_hash": "c1939a74cd8e93957f2ec98158f939c4ccba418f524cd35ae426c02886b173d3",
+      "status": "verified"
+    },
+    {
+      "source_id": "src_sigma_rare_process_cmdline",
+      "title": "Execution of Suspicious Shell or Scripting Interpreter",
+      "canonical_path": "data/knowledge_base/sigma/sigma_proc_rare_process_cmdline.yml",
+      "canonical_url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_script_exec.yml",
+      "document_type": "sigma_rule",
+      "version": "2024-03-01",
+      "license": "Detection-Rule-License-1.1",
+      "retrieved_at": "2026-10-09T04:40:00Z",
+      "content_hash": "69375a7e0058c9b8f378161e1875a63e90bf9be84307c768cf76bec972b6b275",
+      "status": "verified"
+    },
+    {
+      "source_id": "src_sigma_high_volume_data_exfil",
+      "title": "High Volume Network Egress Connection Burst",
+      "canonical_path": "data/knowledge_base/sigma/sigma_net_high_volume_data_exfil.yml",
+      "canonical_url": "https://github.com/SigmaHQ/sigma/blob/master/rules/network/net_high_volume_egress.yml",
+      "document_type": "sigma_rule",
+      "version": "2024-03-15",
+      "license": "Detection-Rule-License-1.1",
+      "retrieved_at": "2026-10-09T04:40:00Z",
+      "content_hash": "bebd937f0ead826ca077335fdfdd7bd292f313c810741374f2ded32f514b867e",
+      "status": "verified"
+    },
+    {
+      "source_id": "src_guide_windows_security_log",
+      "title": "Windows Security Event Log Investigation Guide",
+      "canonical_path": "data/knowledge_base/guides/windows_security_log_investigation.md",
+      "canonical_url": "https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4625",
+      "document_type": "markdown_guide",
+      "version": "2024-08-01",
+      "license": "Project-Owned-Internal",
+      "retrieved_at": "2026-10-09T04:42:00Z",
+      "content_hash": "a1946a6228f2600972b72632ac60145e90bbb9cad3684147329b8386afcb6951",
+      "status": "verified"
+    },
+    {
+      "source_id": "src_guide_auth_anomalies",
+      "title": "Threat Hunting Guide: Authentication Anomalies and Credential Access",
+      "canonical_path": "data/knowledge_base/guides/threat_hunting_authentication_anomalies.md",
+      "canonical_url": "https://attack.mitre.org/tactics/TA0006/",
+      "document_type": "markdown_guide",
+      "version": "2024-09-01",
+      "license": "Project-Owned-Internal",
+      "retrieved_at": "2026-10-09T04:42:00Z",
+      "content_hash": "bcfdd72f6a6eac96e0fb18cd702d4e5158b5191acb5ba40652d2d3b998b7c1ce",
+      "status": "verified"
+    },
+    {
+      "source_id": "src_guide_data_exfil",
+      "title": "Incident Response Playbook: Data Exfiltration and Egress Anomalies",
+      "canonical_path": "data/knowledge_base/guides/incident_response_data_exfiltration.md",
+      "canonical_url": "https://attack.mitre.org/tactics/TA0010/",
+      "document_type": "markdown_guide",
+      "version": "2024-09-15",
+      "license": "Project-Owned-Internal",
+      "retrieved_at": "2026-10-09T04:42:00Z",
+      "content_hash": "253015f3cc2e505350d4de79522535915eee3d1b433798dae1e1203a22f5a92c",
+      "status": "verified"
+    }
+  ]
+}

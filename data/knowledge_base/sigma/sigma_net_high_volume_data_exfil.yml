@@ -1,0 +1,31 @@
+title: High Volume Network Egress Connection Burst
+id: 9a7b3c21-4d5e-6f7a-8b9c-0d1e2f3a4b5c
+status: test
+description: Detects unusual high-volume outbound network data transfer or sustained egress connections to external IP addresses over non-standard or alternative ports.
+references:
+    - https://attack.mitre.org/techniques/T1048/
+    - https://attack.mitre.org/techniques/T1071/
+author: SigmaHQ (Adapted for AI Security Log Project)
+date: 2024-03-15
+tags:
+    - attack.exfiltration
+    - attack.command-and-control
+    - attack.t1048
+    - attack.t1071
+logsource:
+    category: network_connection
+    product: windows
+detection:
+    selection:
+        Initiated: 'true'
+        DestinationIsIpv6: 'false'
+    filter_local:
+        DestinationIp|startswith:
+            - '10.'
+            - '192.168.'
+            - '172.16.'
+            - '127.'
+    condition: selection and not filter_local | sum(BytesOut) by DestinationIp > 104857600 # 100MB
+falsepositives:
+    - Large legitimate cloud backups or routine software distribution
+level: high

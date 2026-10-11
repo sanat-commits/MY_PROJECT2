@@ -1,0 +1,74 @@
+{
+  "version": "v1.0.0",
+  "description": "Default operational risk scoring configuration calibrated against normal training baseline",
+  "ml_anomaly_weight": 40.0,
+  "ml_anomaly_threshold": 0.04116906323724265,
+  "ml_anomaly_max_expected": 0.2,
+  "behavioral_signals": [
+    {
+      "name": "failed_login_burst",
+      "source_field": "failed_logins",
+      "weight": 15.0,
+      "baseline_threshold": 3.0,
+      "saturation_threshold": 40.0,
+      "comparison_operator": "gt",
+      "description": "Authentication failure count exceeded normal baseline (p99=3.0)"
+    },
+    {
+      "name": "elevated_privileged_actions",
+      "source_field": "privileged_actions",
+      "weight": 10.0,
+      "baseline_threshold": 2.0,
+      "saturation_threshold": 10.0,
+      "comparison_operator": "gt",
+      "description": "Privileged command execution volume exceeded normal baseline (p99=2.0)"
+    },
+    {
+      "name": "rare_process_execution",
+      "source_field": "rare_process_count",
+      "weight": 10.0,
+      "baseline_threshold": 1.0,
+      "saturation_threshold": 15.0,
+      "comparison_operator": "gt",
+      "description": "Atypical binary execution frequency exceeded normal baseline (p99=1.0)"
+    },
+    {
+      "name": "excessive_external_connections",
+      "source_field": "external_connections",
+      "weight": 10.0,
+      "baseline_threshold": 19.0,
+      "saturation_threshold": 60.0,
+      "comparison_operator": "gt",
+      "description": "Outbound network egress connection count exceeded normal baseline (p99=19.0)"
+    },
+    {
+      "name": "high_volume_data_egress",
+      "source_field": "bytes_out_mb",
+      "weight": 10.0,
+      "baseline_threshold": 26.905120000000004,
+      "saturation_threshold": 1000.0,
+      "comparison_operator": "gt",
+      "description": "Outbound network egress volume in MB exceeded normal baseline (p99=26.9 MB)"
+    },
+    {
+      "name": "off_hours_activity",
+      "source_field": "after_hours",
+      "weight": 5.0,
+      "baseline_threshold": 1.0,
+      "saturation_threshold": 1.0,
+      "comparison_operator": "eq",
+      "description": "Telemetry observation occurred outside approved operational business hours"
+    }
+  ],
+  "severity_bands": {
+    "low_max": 30.0,
+    "medium_max": 60.0,
+    "high_max": 80.0
+  },
+  "critical_safeguard": {
+    "enabled": true,
+    "min_corroborating_signals": 1
+  },
+  "missing_evidence_policy": "zero_with_audit",
+  "rounding_tolerance": 0.01
+}

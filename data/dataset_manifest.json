@@ -1,0 +1,15 @@
+{
+  "seed": 20261008,
+  "train_rows": 12000,
+  "eval_rows": 4000,
+  "training_policy": "normal_only",
+  "evaluation_policy": "50_percent_normal_50_percent_synthetic_anomaly",
+  "synthetic": true,
+  "anomaly_types": [
+    "brute_force",
+    "off_hours_admin_access",
+    "unusual_external_activity",
+    "data_exfiltration_like",
+    "rare_process_burst"
+  ]
+}

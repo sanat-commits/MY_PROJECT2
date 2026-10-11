@@ -1,0 +1,30 @@
+title: Potential Windows Failed Logon Burst (Brute Force)
+id: 5b6c8e31-89d4-4c8e-a9d1-37d4e5f76b12
+status: test
+description: Detects an unusually high burst of failed logon attempts (Event ID 4625) within a short time window, indicative of password guessing or brute force attacks.
+references:
+    - https://attack.mitre.org/techniques/T1110/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4625
+author: SigmaHQ (Adapted for AI Security Log Project)
+date: 2024-01-15
+modified: 2024-10-01
+tags:
+    - attack.credential-access
+    - attack.t1110
+    - attack.t1110.001
+logsource:
+    product: windows
+    service: security
+detection:
+    selection:
+        EventID: 4625
+        Status: '0xC000006D' # STATUS_LOGON_FAILURE
+    sub_status:
+        SubStatus:
+            - '0xC000006A' # STATUS_WRONG_PASSWORD
+            - '0xC0000064' # STATUS_NO_SUCH_USER
+    condition: selection and sub_status | count(TargetUserName) by IpAddress > 10
+falsepositives:
+    - Expired service account passwords
+    - Misconfigured batch jobs or network shares
+level: medium

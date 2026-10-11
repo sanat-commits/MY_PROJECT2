@@ -1,0 +1,31 @@
+title: Suspicious Privileged Group Member Addition
+id: 8d2c914e-f2a1-4328-9842-8c439f012b45
+status: test
+description: Detects the addition of a user account to a privileged domain or local administrative group (e.g., Domain Admins, Administrators, Enterprise Admins).
+references:
+    - https://attack.mitre.org/techniques/T1078/
+    - https://attack.mitre.org/techniques/T1098/
+author: SigmaHQ (Adapted for AI Security Log Project)
+date: 2024-02-10
+tags:
+    - attack.persistence
+    - attack.privilege-escalation
+    - attack.t1078
+    - attack.t1098
+logsource:
+    product: windows
+    service: security
+detection:
+    selection:
+        EventID:
+            - 4728 # Member added to security-enabled global group
+            - 4732 # Member added to security-enabled local group
+            - 4756 # Member added to security-enabled universal group
+        TargetUserName:
+            - '*Administrators*'
+            - '*Domain Admins*'
+            - '*Enterprise Admins*'
+    condition: selection
+falsepositives:
+    - Authorized administrative provisioning via change control procedures
+level: high

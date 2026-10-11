@@ -1,0 +1,368 @@
+{
+  "type": "bundle",
+  "id": "bundle--5c1b6957-c817-48f5-9321-75571168f123",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "x-mitre-collection",
+      "id": "x-mitre-collection--1f5f2420-2565-4b2a-8b8f-1a9862f9f123",
+      "spec_version": "2.1",
+      "name": "Enterprise ATT&CK",
+      "description": "Official MITRE ATT&CK Enterprise Domain Reference Collection",
+      "x_mitre_version": "14.1",
+      "created": "2023-10-31T00:00:00.000Z",
+      "modified": "2023-10-31T00:00:00.000Z",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://github.com/mitre-attack/attack-stix-data/tree/master/enterprise-attack",
+          "external_id": "Enterprise ATT&CK v14.1"
+        }
+      ]
+    },
+    {
+      "type": "x-mitre-tactic",
+      "id": "x-mitre-tactic--d108ce10-2419-4cf9-a774-46161d6c6cfe",
+      "spec_version": "2.1",
+      "name": "Credential Access",
+      "description": "The adversary is trying to steal account names and passwords.",
+      "x_mitre_shortname": "credential-access",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "TA0006",
+          "url": "https://attack.mitre.org/tactics/TA0006"
+        }
+      ],
+      "created": "2018-10-17T00:14:20.652Z",
+      "modified": "2023-10-15T22:30:00.000Z"
+    },
+    {
+      "type": "x-mitre-tactic",
+      "id": "x-mitre-tactic--5bc1d846-9781-404c-8aa9-4089eccf3469",
+      "spec_version": "2.1",
+      "name": "Execution",
+      "description": "The adversary is trying to run malicious code.",
+      "x_mitre_shortname": "execution",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "TA0002",
+          "url": "https://attack.mitre.org/tactics/TA0002"
+        }
+      ],
+      "created": "2018-10-17T00:14:20.652Z",
+      "modified": "2023-10-15T22:30:00.000Z"
+    },
+    {
+      "type": "x-mitre-tactic",
+      "id": "x-mitre-tactic--5e29b093-294e-49e9-a803-abb3d7777827",
+      "spec_version": "2.1",
+      "name": "Privilege Escalation",
+      "description": "The adversary is trying to gain higher-level permissions.",
+      "x_mitre_shortname": "privilege-escalation",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "TA0004",
+          "url": "https://attack.mitre.org/tactics/TA0004"
+        }
+      ],
+      "created": "2018-10-17T00:14:20.652Z",
+      "modified": "2023-10-15T22:30:00.000Z"
+    },
+    {
+      "type": "x-mitre-tactic",
+      "id": "x-mitre-tactic--f78da753-121f-49eb-bb83-8a9d0b67ff9e",
+      "spec_version": "2.1",
+      "name": "Defense Evasion",
+      "description": "The adversary is trying to avoid being detected.",
+      "x_mitre_shortname": "defense-evasion",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "TA0005",
+          "url": "https://attack.mitre.org/tactics/TA0005"
+        }
+      ],
+      "created": "2018-10-17T00:14:20.652Z",
+      "modified": "2023-10-15T22:30:00.000Z"
+    },
+    {
+      "type": "x-mitre-tactic",
+      "id": "x-mitre-tactic--71387661-8239-441f-863a-bb0a7360a7e6",
+      "spec_version": "2.1",
+      "name": "Exfiltration",
+      "description": "The adversary is trying to steal data.",
+      "x_mitre_shortname": "exfiltration",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "TA0010",
+          "url": "https://attack.mitre.org/tactics/TA0010"
+        }
+      ],
+      "created": "2018-10-17T00:14:20.652Z",
+      "modified": "2023-10-15T22:30:00.000Z"
+    },
+    {
+      "type": "x-mitre-tactic",
+      "id": "x-mitre-tactic--c9225c56-8a56-42bb-923f-561b36d07e6e",
+      "spec_version": "2.1",
+      "name": "Command and Control",
+      "description": "The adversary is trying to communicate with compromised systems to control them.",
+      "x_mitre_shortname": "command-and-control",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "TA0011",
+          "url": "https://attack.mitre.org/tactics/TA0011"
+        }
+      ],
+      "created": "2018-10-17T00:14:20.652Z",
+      "modified": "2023-10-15T22:30:00.000Z"
+    },
+    {
+      "type": "x-mitre-tactic",
+      "id": "x-mitre-tactic--25583480-1524-4964-b654-46e890c563ef",
+      "spec_version": "2.1",
+      "name": "Initial Access",
+      "description": "The adversary is trying to get into your network.",
+      "x_mitre_shortname": "initial-access",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "TA0001",
+          "url": "https://attack.mitre.org/tactics/TA0001"
+        }
+      ],
+      "created": "2018-10-17T00:14:20.652Z",
+      "modified": "2023-10-15T22:30:00.000Z"
+    },
+    {
+      "type": "x-mitre-tactic",
+      "id": "x-mitre-tactic--556933f1-5771-4edd-a131-7e7747833075",
+      "spec_version": "2.1",
+      "name": "Persistence",
+      "description": "The adversary is trying to maintain their foothold.",
+      "x_mitre_shortname": "persistence",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "TA0003",
+          "url": "https://attack.mitre.org/tactics/TA0003"
+        }
+      ],
+      "created": "2018-10-17T00:14:20.652Z",
+      "modified": "2023-10-15T22:30:00.000Z"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--246fd3c7-f5e3-466d-8d0c-f38c3523f39d",
+      "spec_version": "2.1",
+      "name": "Brute Force",
+      "description": "Adversaries may use brute force techniques to attempt access to accounts when passwords are unknown or when password hashes are obtained.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1110",
+          "url": "https://attack.mitre.org/techniques/T1110"
+        }
+      ],
+      "x_mitre_is_subtechnique": false,
+      "x_mitre_platforms": ["Windows", "Linux", "macOS", "SaaS", "Office 365", "IaaS"],
+      "x_mitre_detection": "Monitor authentication logs for repeated failure bursts from single or multiple source IP addresses.",
+      "x_mitre_version": "1.4",
+      "created": "2017-05-31T21:31:18.986Z",
+      "modified": "2023-04-14T20:25:00.000Z"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--09a60ea3-a672-4522-bc3e-797fe9227d1d",
+      "spec_version": "2.1",
+      "name": "Password Guessing",
+      "description": "Adversaries may attempt to guess passwords for user accounts by systematically attempting common passwords against known accounts.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1110.001",
+          "url": "https://attack.mitre.org/techniques/T1110/001"
+        }
+      ],
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_platforms": ["Windows", "Linux", "macOS", "Office 365", "SaaS"],
+      "x_mitre_detection": "Monitor for numerous failed authentication attempts followed by a successful login for a single user.",
+      "x_mitre_version": "1.3",
+      "created": "2020-02-11T18:50:00.000Z",
+      "modified": "2023-04-14T20:25:00.000Z"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1644e579-1157-4180-a681-424a73229b4e",
+      "spec_version": "2.1",
+      "name": "Valid Accounts",
+      "description": "Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "privilege-escalation"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078",
+          "url": "https://attack.mitre.org/techniques/T1078"
+        }
+      ],
+      "x_mitre_is_subtechnique": false,
+      "x_mitre_platforms": ["Linux", "macOS", "Windows", "SaaS", "IaaS", "Office 365"],
+      "x_mitre_detection": "Monitor for anomalous user activity, unusual hours, atypical access origins, or unexpected elevation.",
+      "x_mitre_version": "2.4",
+      "created": "2017-05-31T21:30:58.007Z",
+      "modified": "2023-10-15T22:30:00.000Z"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d1045761-ad81-4f1e-9243-7f21f1e84ff8",
+      "spec_version": "2.1",
+      "name": "Command and Scripting Interpreter",
+      "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059",
+          "url": "https://attack.mitre.org/techniques/T1059"
+        }
+      ],
+      "x_mitre_is_subtechnique": false,
+      "x_mitre_platforms": ["Linux", "macOS", "Windows"],
+      "x_mitre_detection": "Command-line execution parameters may be logged and examined for anomalous scripts or unexpected parent processes.",
+      "x_mitre_version": "2.3",
+      "created": "2020-03-09T14:15:00.000Z",
+      "modified": "2023-09-29T18:00:00.000Z"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7385dfaf-6886-4229-9ecd-6fd629ab0a40",
+      "spec_version": "2.1",
+      "name": "Application Layer Protocol",
+      "description": "Adversaries may communicate using application layer protocols to avoid detection/network filtering by blending in with existing traffic.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071",
+          "url": "https://attack.mitre.org/techniques/T1071"
+        }
+      ],
+      "x_mitre_is_subtechnique": false,
+      "x_mitre_platforms": ["Linux", "macOS", "Windows"],
+      "x_mitre_detection": "Analyze network traffic for anomalous connection frequencies, destinations, and protocol deviations.",
+      "x_mitre_version": "2.1",
+      "created": "2020-03-10T17:00:00.000Z",
+      "modified": "2023-04-14T20:25:00.000Z"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--438e2170-c75c-4a30-8902-861c8a6791d3",
+      "spec_version": "2.1",
+      "name": "Exfiltration Over Alternative Protocol",
+      "description": "Adversaries may steal data by exfiltrating it over a different protocol than that of the existing command and control channel.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "exfiltration"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1048",
+          "url": "https://attack.mitre.org/techniques/T1048"
+        }
+      ],
+      "x_mitre_is_subtechnique": false,
+      "x_mitre_platforms": ["Linux", "macOS", "Windows"],
+      "x_mitre_detection": "Monitor egress network connection volumes and bytes transferred exceeding established baselines.",
+      "x_mitre_version": "2.0",
+      "created": "2017-05-31T21:30:48.000Z",
+      "modified": "2023-04-14T20:25:00.000Z"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b8b2b9f3-8f08-41e9-a3b0-0b61690e8c89",
+      "spec_version": "2.1",
+      "name": "Abuse Elevation Control Mechanism",
+      "description": "Adversaries may circumvent mechanisms designed to control elevate privileges to gain higher-level permissions.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "privilege-escalation"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1548",
+          "url": "https://attack.mitre.org/techniques/T1548"
+        }
+      ],
+      "x_mitre_is_subtechnique": false,
+      "x_mitre_platforms": ["Linux", "macOS", "Windows"],
+      "x_mitre_detection": "Monitor process execution and privilege adjustment events.",
+      "x_mitre_version": "2.0",
+      "created": "2020-01-23T18:00:00.000Z",
+      "modified": "2023-04-14T20:25:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4f4e7c1a-2895-46aa-b2b9-e15291f89312",
+      "spec_version": "2.1",
+      "relationship_type": "subtechnique-of",
+      "source_ref": "attack-pattern--09a60ea3-a672-4522-bc3e-797fe9227d1d",
+      "target_ref": "attack-pattern--246fd3c7-f5e3-466d-8d0c-f38c3523f39d",
+      "created": "2020-02-11T18:50:00.000Z",
+      "modified": "2020-02-11T18:50:00.000Z"
+    }
+  ]
+}
