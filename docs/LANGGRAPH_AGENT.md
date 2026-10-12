@@ -47,7 +47,7 @@ The agent coordinates context enrichment by determining evidence gaps on incomin
 
 ## 2. Cybersecurity Truthfulness & Operational Boundaries
 
-In strict compliance with `AGENTS.md`:
+Core operational boundaries and truthfulness principles:
 1. **Aggregated Feature Windows Only**: The underlying security telemetry in this project consists of synthetic 1-hour aggregated behavioral windows (`data/synthetic/windows1h_security.csv`). These are **not raw Windows Event Logs (EVTX)** or Sysmon process event sequences. Tools querying this source explicitly return records labeled `record_type: "aggregated_behavioral_window"`.
 2. **Immutable Alert Baseline**: The agent never mutates the original alert's `alert_id`, `risk_score`, or `severity`.
 3. **Verified Knowledge & ATT&CK Only**: Knowledge retrieval queries the verified Phase 5 hybrid index. ATT&CK lookups query the verified Phase 4 STIX Enterprise ATT&CK catalog. No synthetic techniques or imaginary evidence items are ever fabricated.

@@ -51,7 +51,7 @@ class OllamaLlmProvider(LlmProvider):
     def health_check(self) -> bool:
         """Check if Ollama server responds at /api/tags."""
         try:
-            r = requests.get(f"{self._base_url}/api/tags", timeout=4.0)
+            r = requests.get(f"{self._base_url}/api/tags", timeout=10.0)
             return r.status_code == 200
         except Exception:
             return False
@@ -60,7 +60,7 @@ class OllamaLlmProvider(LlmProvider):
         """Enumerate installed local models."""
         url = f"{self._base_url}/api/tags"
         try:
-            r = requests.get(url, timeout=5.0)
+            r = requests.get(url, timeout=10.0)
             if r.status_code != 200:
                 raise ProviderUnavailableError(f"HTTP {r.status_code} querying tags at {url}")
             data = r.json()

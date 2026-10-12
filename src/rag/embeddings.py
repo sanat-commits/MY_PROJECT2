@@ -63,7 +63,7 @@ class OllamaEmbeddingProvider(EmbeddingProvider):
         """Verify that Ollama daemon is running and configured model is present."""
         tags_url = f"{self._base_url}/api/tags"
         try:
-            resp = requests.get(tags_url, timeout=3.0)
+            resp = requests.get(tags_url, timeout=10.0)
             if resp.status_code != 200:
                 raise EmbeddingUnavailableError(
                     f"Ollama daemon returned HTTP {resp.status_code} at {tags_url}. "

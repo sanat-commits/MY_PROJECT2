@@ -1,12 +1,42 @@
+# Python & Bytecode
 __pycache__/
 *.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Virtual Environments
 .venv/
+venv/
+ENV/
+
+# Testing & Quality Caches
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.coverage
+htmlcov/
+
+# Environment Variables & Secrets
 .env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Artifacts & Local Data
 artifacts/
 logs/
+*.log
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# IDE & OS
 .vscode/
 .idea/
 .DS_Store
+Thumbs.db

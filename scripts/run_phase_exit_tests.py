@@ -2002,7 +2002,7 @@ def run_phase_10_exit_tests() -> bool:
 
     # 7. Documentation files present
     check("docs/LIMITATIONS_AND_FUTURE_WORK.md present", (ROOT / "docs" / "LIMITATIONS_AND_FUTURE_WORK.md").exists())
-    check("docs/RESUME_PROJECT_DESCRIPTION.md present", (ROOT / "docs" / "RESUME_PROJECT_DESCRIPTION.md").exists())
+    check("README.md present", (ROOT / "README.md").exists())
     check("artifacts/evaluation/EVALUATION_REPORT.md present", (eval_dir / "EVALUATION_REPORT.md").exists())
 
     # 8. Evaluation scripts all exist
